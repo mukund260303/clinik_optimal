@@ -203,7 +203,7 @@ className="object-cover object-[00%_05%] w-full h-full"
                 <Clock className="text-blue-500 mt-1" size={24} />
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 mb-2">Timing</p>
-                  <p className="text-xl font-bold italic text-blue-500">Open: 10AM - 9PM (Mon-Sat)</p>
+                  <p className="text-xl font-bold italic text-blue-500">Open Morning: 09:00AM - 01:00PM And Evening 05:00PM - 08:30PM (Mon-Sat)</p>
                 </div>
               </div>
             </div>
