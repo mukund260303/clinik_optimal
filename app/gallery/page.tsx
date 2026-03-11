@@ -10,18 +10,19 @@ export default function GalleryPage() {
 
   // 12 Professional Placeholder Photos (Jab tak aap admin se aur na daal dein)
   const fallbackImages = [
-    { id: 'f1', image_url: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef', caption: 'Professional Assessment', category: 'Expertise' },
-    { id: 'f2', image_url: '/gallery/sports_injuries.jpg', caption: 'Sports Injury Rehab', category: 'Sports' },
-    { id: 'f3', image_url:'/gallery/advance_equipment.jpg', caption: 'Advanced Equipment', category: 'Clinic' },
-    { id: 'f4', image_url: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8', caption: 'Neuro Rehabilitation', category: 'Neuro' },
-    { id: 'f5', image_url: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9', caption: 'Spine Mobilization', category: 'Treatment' },
-    { id: 'f6', image_url: '/gallery/posture_correction.jpg', caption: 'Posture Correction', category: 'Care' },
-    { id: 'f7', image_url: '/gallery/clinic5.png', caption: 'Manual Therapy', category: 'Expertise' },
-    { id: 'f8', image_url: '/gallery/consultation_area.jpg', caption: 'Clinic Consultation Area', category: 'Clinic' },
-    { id: 'f9', image_url: '/gallery/pediatric_care.jpeg', caption: 'Pediatric Care', category: 'Care' },
-    { id: 'f10', image_url: '/gallery/joint_pain.jpg', caption: 'Joint Recovery', category: 'Treatment' },
-    { id: 'f11', image_url: '/gallery/Therapeutic Exercise.jpg', caption: 'Therapeutic Exercise', category: 'Sports' },
-    { id: 'f12', image_url: '/gallery/clinic8.png', caption: 'Modern Treatment Bay', category: 'Clinic' },
+     { id: 'f1', image_url: '/gallery/clinic8.png', caption: 'Modern Treatment Bay', category: 'Clinic' },
+     { id: 'f2', image_url: '/gallery/Therapeutic Exercise.jpg', caption: 'Therapeutic Exercise', category: 'Sports' },
+    { id: 'f3', image_url: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef', caption: 'Professional Assessment', category: 'Expertise' },
+    { id: 'f4', image_url:'/gallery/advance_equipment.jpg', caption: 'Advanced Equipment', category: 'Clinic' },
+    { id: 'f5', image_url: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8', caption: 'Neuro Rehabilitation', category: 'Neuro' },
+    { id: 'f6', image_url: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9', caption: 'Spine Mobilization', category: 'Treatment' },
+    { id: 'f7', image_url: '/gallery/posture_correction.jpg', caption: 'Posture Correction', category: 'Care' },
+    { id: 'f8', image_url: '/gallery/clinic5.png', caption: 'Manual Therapy', category: 'Expertise' },
+    { id: 'f9', image_url: '/gallery/consultation_area.jpg', caption: 'Clinic Consultation Area', category: 'Clinic' },
+    { id: 'f10', image_url: '/gallery/pediatric_care.jpeg', caption: 'Pediatric Care', category: 'Care' },
+    { id: 'f11', image_url: '/gallery/sports_injuries.jpg', caption: 'Sports Injury Rehab', category: 'Sports' },
+    { id: 'f12', image_url: '/gallery/joint_pain.jpg', caption: 'Joint Recovery', category: 'Treatment' },
+   
   ]
 
   useEffect(() => {
