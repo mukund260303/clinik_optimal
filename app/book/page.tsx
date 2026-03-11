@@ -155,7 +155,7 @@ export default function BookingPage() {
                <Zap className="text-blue-500 fill-blue-500" size={12} />
                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-400 italic">Clinical Unit</span>
             </div>
-            <h2 className="text-6xl font-black italic tracking-tighter uppercase leading-[0.9] mb-8">Optimal <br /> <span className="text-blue-600">Physio.</span></h2>
+            <h2 className="text-6xl font-black italic tracking-tighter uppercase leading-[0.9] mb-8">Optimal <br /> <span className="text-blue-600">Physiotherapy</span></h2>
           </div>
         </div>
 

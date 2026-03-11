@@ -11,17 +11,17 @@ export default function GalleryPage() {
   // 12 Professional Placeholder Photos (Jab tak aap admin se aur na daal dein)
   const fallbackImages = [
     { id: 'f1', image_url: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef', caption: 'Professional Assessment', category: 'Expertise' },
-    { id: 'f2', image_url: 'https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d', caption: 'Sports Injury Rehab', category: 'Sports' },
-    { id: 'f3', image_url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158', caption: 'Advanced Equipment', category: 'Clinic' },
+    { id: 'f2', image_url: '/gallery/sports_injuries.jpg', caption: 'Sports Injury Rehab', category: 'Sports' },
+    { id: 'f3', image_url:'/gallery/advance_equipment.jpg', caption: 'Advanced Equipment', category: 'Clinic' },
     { id: 'f4', image_url: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8', caption: 'Neuro Rehabilitation', category: 'Neuro' },
     { id: 'f5', image_url: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9', caption: 'Spine Mobilization', category: 'Treatment' },
-    { id: 'f6', image_url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b', caption: 'Posture Correction', category: 'Care' },
-    { id: 'f7', image_url: 'https://images.unsplash.com/photo-1565608438257-fac3c27beb36', caption: 'Manual Therapy', category: 'Expertise' },
-    { id: 'f8', image_url: 'https://images.unsplash.com/photo-1591258739299-5b65d5cbb235', caption: 'Clinic Consultation Area', category: 'Clinic' },
-    { id: 'f9', image_url: 'https://images.unsplash.com/photo-1505751172107-16016e6d1912', caption: 'Pediatric Care', category: 'Care' },
-    { id: 'f10', image_url: 'https://images.unsplash.com/photo-1574600078827-034945b42162', caption: 'Joint Recovery', category: 'Treatment' },
-    { id: 'f11', image_url: 'https://images.unsplash.com/photo-1583416750470-965b2707b355', caption: 'Therapeutic Exercise', category: 'Sports' },
-    { id: 'f12', image_url: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09', caption: 'Modern Treatment Bay', category: 'Clinic' },
+    { id: 'f6', image_url: '/gallery/posture_correction.jpg', caption: 'Posture Correction', category: 'Care' },
+    { id: 'f7', image_url: '/gallery/clinic5.png', caption: 'Manual Therapy', category: 'Expertise' },
+    { id: 'f8', image_url: '/gallery/consultation_area.jpg', caption: 'Clinic Consultation Area', category: 'Clinic' },
+    { id: 'f9', image_url: '/gallery/pediatric_care.jpeg', caption: 'Pediatric Care', category: 'Care' },
+    { id: 'f10', image_url: '/gallery/joint_pain.jpg', caption: 'Joint Recovery', category: 'Treatment' },
+    { id: 'f11', image_url: '/gallery/Therapeutic Exercise.jpg', caption: 'Therapeutic Exercise', category: 'Sports' },
+    { id: 'f12', image_url: '/gallery/clinic8.png', caption: 'Modern Treatment Bay', category: 'Clinic' },
   ]
 
   useEffect(() => {
@@ -85,10 +85,16 @@ export default function GalleryPage() {
                   alt={img.caption} 
                   className="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 p-8 flex flex-col justify-end">
-                   <span className="text-blue-400 text-[10px] font-black uppercase tracking-[0.2em] mb-2">{img.category}</span>
-                   <p className="text-white font-black uppercase tracking-tighter text-xl leading-tight">{img.caption}</p>
-                </div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 p-8">
+   <div className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg">
+      <span className="text-[10px] font-bold uppercase tracking-widest block">
+         {img.category}
+      </span>
+      <span className="text-sm font-black uppercase leading-tight">
+         {img.caption}
+      </span>
+   </div>
+</div>
               </div>
             ))}
           </div>

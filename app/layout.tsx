@@ -11,10 +11,17 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-export const metadata: Metadata = {
-  title: "PhysioBhopal | Expert Physiotherapy Care",
-  description: "Bhopal's leading clinic for sports injury, back pain, and recovery.",
+export const metadata = {
+  title: "Optimal Physiotherapy | Best Physiotherapy Clinic in Lalghati Bhopal",
+  description:
+    "Optimal Physiotherapy Clinic in Lalghati Bhopal provides advanced physiotherapy treatment for back pain, sports injury, neuro rehabilitation and mobility recovery.",
+  keywords: [
+    "physiotherapy bhopal",
+    "physiotherapist lalghati",
+    "back pain treatment bhopal",
+    "sports injury physiotherapy bhopal",
+    "best physiotherapy clinic bhopal"
+  ]
 };
 
 export default function RootLayout({
@@ -24,7 +31,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans`}>
+      <body
+  className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans`}
+  style={{
+    background: "linear-gradient(135deg, #dbeafe 0%, #ffffff 50%, #bfdbfe 100%)"
+  }}
+>
         
         {/* Main Content */}
         {children}
