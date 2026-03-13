@@ -90,7 +90,24 @@ className="bg-blue-600 text-white px-10 py-6 rounded-[2rem] font-black text-lg f
 </a>
             </div>
           </div>
-          
+          </div>
+</div>
+
+{/* SEO Doctor Heading */}
+<div className="text-center mt-16 mb-12">
+
+  <h2 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900">
+    Expert Physiotherapists in <span className="text-blue-600">Lalghati Bhopal</span>
+  </h2>
+
+  <p className="text-slate-500 mt-4 max-w-2xl mx-auto text-sm md:text-base">
+    Meet our experienced physiotherapists providing advanced treatment for spine pain, sports injuries, stroke rehabilitation and women’s health physiotherapy in Lalghati, Bhopal.
+  </p>
+
+</div>
+
+<div className="relative flex flex-col items-center gap-10">
+
          <div className="relative flex flex-col items-center gap-10">
 
   {/* Doctor Pavan */}
