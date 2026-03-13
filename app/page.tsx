@@ -93,72 +93,66 @@ className="bg-blue-600 text-white px-10 py-6 rounded-[2rem] font-black text-lg f
           
          <div className="relative flex flex-col items-center gap-10">
 
-  <div className="flex flex-col md:flex-row gap-10 items-center">
+  {/* Doctor Pavan */}
+  <div className="bg-white p-6 rounded-[3rem] shadow-xl text-center max-w-[300px]">
 
-    {/* Doctor 1 */}
-    <div className="bg-white p-6 rounded-[3rem] shadow-xl text-center max-w-[260px]">
-      
-      <img 
-        src="/gallery/Dr-pavan.png"
-        alt="Dr Pavan Patidar"
-        className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-blue-600 mx-auto"
-      />
+    <img 
+      src="/gallery/Dr-pavan.png"
+      alt="Dr Pavan Patidar"
+      className="w-36 h-36 rounded-full object-cover border-4 border-blue-600 mx-auto"
+    />
 
-       <img 
-        src="/gallery/dr-Ravina.png"
-        alt="Dr Ravina Patidar (PT)"
-        className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-blue-600 mx-auto"
-      />
+    <h3 className="mt-4 text-lg font-black text-slate-900">
+      Dr. Pavan Patidar (PT)
+    </h3>
 
-      <p className="text-sm text-slate-500">
-        MPT (Orthopaedic)
-      </p>
+    <p className="text-sm text-slate-500">
+      MPT (Orthopaedic)
+    </p>
 
-      <p className="text-xs text-slate-400 mt-1">
-        Senior Physiotherapist • 12+ Years Experience
-      </p>
+    <p className="text-xs text-slate-400 mt-1">
+      Senior Physiotherapist • 12+ Years Experience
+    </p>
 
-      <p className="text-xs text-slate-500 mt-3">
-        Expert in spine, knee, shoulder & sports injury physiotherapy
-      </p>
+    <p className="text-xs text-slate-500 mt-3">
+      Expert in spine, knee, shoulder & sports injury physiotherapy
+    </p>
 
-      <p className="text-[11px] text-slate-400 mt-2 italic">
-        Ex Physiotherapist – Chirayu Medical College & Hospital, Bhopal
-      </p>
+    <p className="text-[11px] text-slate-400 mt-2 italic">
+      Ex Physiotherapist – Chirayu Medical College & Hospital, Bhopal
+    </p>
 
-    </div>
+  </div>
 
 
-    {/* Doctor 2 */}
-    <div className="bg-white p-6 rounded-[3rem] shadow-xl text-center max-w-[260px]">
+  {/* Doctor Ravina */}
+  <div className="bg-white p-6 rounded-[3rem] shadow-xl text-center max-w-[300px]">
 
-      <img 
-        src="/doctors/dr-image.png"
-        alt="Dr Ravina Patidar"
-        className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-blue-600 mx-auto"
-      />
+    <img 
+      src="/gallery/dr-Ravina.png"
+      alt="Dr Ravina Patidar"
+      className="w-36 h-36 rounded-full object-cover border-4 border-blue-600 mx-auto"
+    />
 
-      <h3 className="mt-4 text-lg font-black text-slate-900">
-        Dr. Ravina Patidar (PT)
-      </h3>
+    <h3 className="mt-4 text-lg font-black text-slate-900">
+      Dr. Ravina Patidar (PT)
+    </h3>
 
-      <p className="text-sm text-slate-500">
-        MPT (Neuro)
-      </p>
+    <p className="text-sm text-slate-500">
+      MPT (Neuro)
+    </p>
 
-      <p className="text-xs text-slate-400 mt-1">
-        Senior Physiotherapist • 8+ Years Experience
-      </p>
+    <p className="text-xs text-slate-400 mt-1">
+      Senior Physiotherapist • 8+ Years Experience
+    </p>
 
-      <p className="text-xs text-slate-500 mt-3">
-        Expert in spine, stroke, peripheral neuropathy, diabetic neuropathy & women health physiotherapy
-      </p>
+    <p className="text-xs text-slate-500 mt-3">
+      Expert in spine, stroke, peripheral neuropathy, diabetic neuropathy & women health physiotherapy
+    </p>
 
-      <p className="text-[11px] text-slate-400 mt-2 italic">
-        Ex Physiotherapist – CMAS Kohefiza Hospital, Bhopal
-      </p>
-
-    </div>
+    <p className="text-[11px] text-slate-400 mt-2 italic">
+      Ex Physiotherapist – CMAS Kohefiza Hospital, Bhopal
+    </p>
 
   </div>
 
