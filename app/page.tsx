@@ -99,13 +99,13 @@ className="bg-blue-600 text-white px-10 py-6 rounded-[2rem] font-black text-lg f
     <div className="bg-white p-6 rounded-[3rem] shadow-xl text-center max-w-[260px]">
       
       <img 
-        src="public/gallery/Dr-pavan.png"
+        src="/gallery/Dr-pavan.png"
         alt="Dr Pavan Patidar"
         className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-blue-600 mx-auto"
       />
 
        <img 
-        src="public/gallery/dr-Ravina.png"
+        src="/gallery/dr-Ravina.png"
         alt="Dr Ravina Patidar (PT)"
         className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-blue-600 mx-auto"
       />
