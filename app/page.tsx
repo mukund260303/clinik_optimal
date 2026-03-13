@@ -54,7 +54,7 @@ export default function Home() {
 
       <Link 
 href="/book"
-className="ml-4 md:ml-0 bg-slate-900 text-white px-8 py-3.5 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] hover:bg-blue-600 transition-all">
+className="bg-slate-900 text-white px-5 md:px-8 py-3.5 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] whitespace-nowrap hover:bg-blue-600 transition-all">
 Book Now
 </Link>
       </nav>
