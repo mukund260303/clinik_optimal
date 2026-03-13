@@ -99,7 +99,7 @@ className="bg-blue-600 text-white px-10 py-6 rounded-[2rem] font-black text-lg f
     <img 
       src="/gallery/Dr-pavan.png"
       alt="Dr Pavan Patidar"
-      className="w-36 h-36 rounded-full object-cover object-[center_90%] border-4 border-blue-600 mx-auto"
+      className="w-36 h-36 rounded-full object-cover object-[center_100%] border-4 border-blue-600 mx-auto"
     />
 
     <h3 className="mt-4 text-lg font-black text-slate-900">
@@ -131,7 +131,7 @@ className="bg-blue-600 text-white px-10 py-6 rounded-[2rem] font-black text-lg f
     <img 
       src="/gallery/dr-Ravina.png"
       alt="Dr Ravina Patidar"
-      className="w-36 h-36 rounded-full object-cover object-[center_10%] border-4 border-blue-600 mx-auto"
+      className="w-36 h-36 rounded-full object-cover object-[center_00%] border-4 border-blue-600 mx-auto"
     />
 
     <h3 className="mt-4 text-lg font-black text-slate-900">
