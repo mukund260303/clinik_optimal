@@ -19,7 +19,7 @@ export const variants = {
 type VariantKey = keyof typeof variants
 
 interface ScrollRevealProps {
-  children: ReactNode
+  children?: ReactNode
   variant?: VariantKey
   delay?: number
   duration?: number
