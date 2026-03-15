@@ -41,6 +41,12 @@ export default function TestimonialsCarousel() {
   const [newReview, setNewReview] = useState({
     name: '', condition: '', text: '', stars: 5
   })
+const [reviewStats, setReviewStats] = useState({
+  total: defaultReviews.length,
+  five: defaultReviews.length,
+  four: 0,
+  three: 0
+})
 
   // Load reviews from Supabase on mount
   useEffect(() => {
@@ -48,29 +54,68 @@ export default function TestimonialsCarousel() {
   }, [])
 
   const loadReviews = async () => {
-    const { data } = await supabase
-      .from('reviews')
-      .select('*')
-      .eq('approved', true)
-      .order('id', { ascending: false })
 
-    if (data && data.length > 0) {
-      const colors = ['bg-blue-600','bg-purple-600','bg-emerald-600','bg-rose-600','bg-amber-600','bg-teal-600','bg-indigo-600','bg-pink-600']
-      const mapped = data.map((r: any, i: number) => ({
-        id: String(r.id),
-        name: r.name,
-        condition: r.condition || 'Patient Review',
-        initials: r.name.split(' ').map((n: string) => n[0]).join('').slice(0,2).toUpperCase(),
-        stars: r.stars || 5,
-        color: colors[i % colors.length],
-        text: r.text,
-        source: 'Verified'
-      }))
-      setReviews([...mapped, ...defaultReviews])
-    } else {
-      setReviews(defaultReviews)
-    }
+  const { data } = await supabase
+    .from('reviews')
+    .select('*')
+    .eq('approved', true)
+    .order('id', { ascending: false })
+
+  if (data && data.length > 0) {
+
+    const five = data.filter(r => r.stars === 5).length
+    const four = data.filter(r => r.stars === 4).length
+    const three = data.filter(r => r.stars === 3).length
+
+    setReviewStats({
+      total: data.length + defaultReviews.length,
+      five,
+      four,
+      three
+    })
+
+    const colors = [
+      'bg-blue-600','bg-purple-600','bg-emerald-600',
+      'bg-rose-600','bg-amber-600','bg-teal-600',
+      'bg-indigo-600','bg-pink-600'
+    ]
+
+    const mapped = data.map((r: any, i: number) => ({
+      id: String(r.id),
+      name: r.name,
+      condition: r.condition || 'Patient Review',
+      initials: r.name.split(' ').map((n: string) => n[0]).join('').slice(0,2).toUpperCase(),
+      stars: r.stars || 5,
+      color: colors[i % colors.length],
+      text: r.text,
+      source: 'Verified'
+    }))
+
+    setReviews([...mapped, ...defaultReviews])
+
+  } else {
+
+    setReviewStats({
+      total: defaultReviews.length,
+      five: defaultReviews.length,
+      four: 0,
+      three: 0
+    })
+
+    setReviews(defaultReviews)
+
   }
+
+}
+useEffect(() => {
+
+  const interval = setInterval(() => {
+    loadReviews()
+  }, 5000)
+
+  return () => clearInterval(interval)
+
+}, [])
 
   // Auto scroll every 3 seconds
   useEffect(() => {
@@ -130,7 +175,71 @@ export default function TestimonialsCarousel() {
           typingWords={['Say About Us', 'Feel About Us', 'Think About Us', 'Share With Us']}
           subtitle="Real reviews from real patients on JustDial & Google — join thousands who've reclaimed their quality of life."
         />
+{/* Rating Summary */}
+<div className="flex flex-col md:flex-row items-start md:items-center gap-10 mb-14">
 
+<div className="flex items-center gap-5">
+
+<div className="bg-green-600 text-white text-3xl font-black px-6 py-4 rounded-2xl">
+4.8
+</div>
+
+<div>
+<p className="text-lg font-black text-slate-900">
+{reviewStats.total}+ Ratings
+</p>
+
+<p className="text-sm text-slate-400">
+Clinic rating based on patient reviews
+</p>
+
+<div className="flex mt-1">
+{[1,2,3,4,5].map(i => (
+<Star key={i} size={16} className="text-yellow-400 fill-yellow-400"/>
+))}
+</div>
+
+</div>
+</div>
+
+<div className="flex flex-col gap-3 text-sm font-bold text-slate-700">
+
+<div className="flex items-center gap-3">
+<span>★★★★★</span>
+<div className="w-48 h-2 bg-slate-200 rounded-full overflow-hidden">
+<div
+className="h-full bg-green-500"
+style={{ width: `${(reviewStats.five / reviewStats.total) * 100 || 0}%` }}
+/>
+</div>
+<span>{reviewStats.five}</span>
+</div>
+
+<div className="flex items-center gap-3">
+<span>★★★★</span>
+<div className="w-48 h-2 bg-slate-200 rounded-full overflow-hidden">
+<div
+className="h-full bg-yellow-500"
+style={{ width: `${(reviewStats.four / reviewStats.total) * 100 || 0}%` }}
+/>
+</div>
+<span>{reviewStats.four}</span>
+</div>
+
+<div className="flex items-center gap-3">
+<span>★★★</span>
+<div className="w-48 h-2 bg-slate-200 rounded-full overflow-hidden">
+<div
+className="h-full bg-orange-500"
+style={{ width: `${(reviewStats.three / reviewStats.total) * 100 || 0}%` }}
+/>
+</div>
+<span>{reviewStats.three}</span>
+</div>
+
+</div>
+
+</div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-start">
 
           {/* Left — Auto scroll stack */}
@@ -242,7 +351,14 @@ export default function TestimonialsCarousel() {
                 <Plus size={14} /> Add Your Review
               </motion.button>
 
-
+<a
+href="https://www.justdial.com/Bhopal/Optimal-Physiotherapy-Re-habilitation-Centre-Near-Of-Power-House-Gymnear-Airport-Road-Behind-Bhopal-Multispeciality-Hospital-Lalghati/0755PX755-X755-170726201507-N8R3_BZDET"
+target="_blank"
+rel="noopener noreferrer"
+className="flex-1 flex items-center justify-center gap-2 bg-white border border-blue-600 text-blue-600 py-3 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-blue-600 hover:text-white transition-all"
+>
+⭐ View All 368+ Google Reviews
+</a>
             </div>
 
 
