@@ -3,18 +3,26 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const stats = [
-  { value: 2000, suffix: '+', label: 'Happy Patients', emoji: '😊' },
-  { value: 12, suffix: '+', label: 'Years Experience', emoji: '📅' },
-  { value: 9.8, suffix: '', label: 'Star Rating', emoji: '⭐', isDecimal: true },
+  { value: 5000, suffix: '+', label: 'Happy Patients', emoji: '😊' },
+  { value: 10, suffix: '+', label: 'Years Experience', emoji: '📅' },
+  { value: 4.9, suffix: '', label: 'Star Rating', emoji: '⭐', isDecimal: true },
   { value: 20, suffix: '+', label: 'Combined Exp.', emoji: '📋' },
 ]
 
 function Counter({ value, suffix, isDecimal }: { value: number; suffix: string; isDecimal?: boolean }) {
   const [count, setCount] = useState(0)
+  const [started, setStarted] = useState(false)
   const ref = useRef(null)
-  const inView = useInView(ref, { once: true })
+  const inView = useInView(ref, { once: true, margin: '0px' })
+
   useEffect(() => {
-    if (!inView) return
+    // Start animation when in view OR after 1 second (fallback for Vercel)
+    const fallback = setTimeout(() => setStarted(true), 1000)
+    return () => clearTimeout(fallback)
+  }, [])
+
+  useEffect(() => {
+    if (!inView && !started) return
     let start = 0
     const step = 16
     const increment = value / (1800 / step)
@@ -24,7 +32,8 @@ function Counter({ value, suffix, isDecimal }: { value: number; suffix: string; 
       else setCount(isDecimal ? Math.round(start * 10) / 10 : Math.floor(start))
     }, step)
     return () => clearInterval(timer)
-  }, [inView, value, isDecimal])
+  }, [inView, started, value, isDecimal])
+
   return (
     <span ref={ref} className="text-3xl sm:text-4xl md:text-5xl font-black text-blue-900 tracking-tight">
       {isDecimal ? count.toFixed(1) : count.toLocaleString()}{suffix}
