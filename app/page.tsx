@@ -137,7 +137,7 @@ export default function Home() {
               { title: 'Neuro Care', icon: <Award />, img: '/gallery/service2.jpeg', desc: 'Scientific protocols for stroke recovery, neuropathy & neuro-rehabilitation.', wa: 'Neuro Physiotherapy', pos: 'object-center' },
               { title: 'Spine Sync', icon: <Microscope />, img: '/gallery/service3.jpeg', desc: 'Precision spine mobilization for back pain, disc issues & postural correction.', wa: 'Spine Treatment', pos: 'object-top' },
               { title: "Women's Health", icon: <ShieldCheck />, img: '/gallery/service4.jpeg', desc: 'Prenatal, postnatal & pelvic floor rehabilitation tailored for women.', wa: "Women's Health Physiotherapy", pos: 'object-top' },
-              { title: 'Post-Surgical', icon: <Award />, img: '/gallery/service5.jpeg', desc: 'Structured rehab following joint replacements & orthopedic surgeries.', wa: 'Post-Surgical Rehabilitation', pos: 'object-center' },
+              { title: 'Post-Surgical', icon: <Award />, img: '/gallery/service_5.png', desc: 'Structured rehab following joint replacements & orthopedic surgeries.', wa: 'Post-Surgical Rehabilitation', pos: 'object-center' },
               { title: 'Pediatric Physio', icon: <Zap />, img: '/gallery/service6.jpeg', desc: 'Gentle therapy for children with developmental delays & musculoskeletal conditions.', wa: 'Pediatric Physiotherapy', pos: 'object-center' },
             ].map((s, i) => (
               <Reveal key={i} delay={(i % 3) * 0.1}>
